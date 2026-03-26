@@ -5,6 +5,8 @@
 
 <img width="2547" height="1068" alt="image" src="https://github.com/user-attachments/assets/b71375cc-dfae-4b6b-9df9-885d20208f96" />    
 
+<img width="2552" height="1073" alt="image" src="https://github.com/user-attachments/assets/eaebce78-e951-4719-a4f7-40acf37f4bcb" />    
+
 ```
 
 📌 Actualización y Consulta de Productos de Papelería.
