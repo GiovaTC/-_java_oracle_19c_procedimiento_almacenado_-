@@ -1,15 +1,45 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.sql.*;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class Main {
+
+    // cambia estos datos segun tu entorno .
+    private static final String URL = "jdbc:oracle:thin:@//localhost:1521/orcl";
+    private static final String USER = "system";
+    private static final String PASS = "Tapiero123";
+
+    public static void main(String[] args) {
+
+        Connection conn = null;
+
+        try {
+            // conexion .
+            conn = DriverManager.getConnection(URL, USER, PASS);
+            System.out.println("✅ Conectado a Oracle");
+            
+            // actualizar producto usando procedimiento almacenado .
+            actualizarProducto(conn, 1, "Cuaderno Profesional", 7000, 40);
+            
+            // mostrar  todos los productos .
+            mostrarProductos(conn);
+        
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (conn != null) conn.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
+
+    private static void mostrarProductos(Connection conn) {
+    }
+
+    private static void actualizarProducto(Connection conn, int i, String cuadernoProfesional, int i1, int i2) {
+        
+    }
+
+    // metodo para llamar al procedimiento almacenado .
+    
 }
